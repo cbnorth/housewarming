@@ -1,0 +1,64 @@
+// ----- COLORS -----
+$ifBlack:rgba(71,71,71,1);
+$brand: #21A1C1;
+$ifTeal: #44DBEE;
+$ifGray: rgba(242,242,242,1);
+$darkGray: #474747;
+$primary_background: $ifGray;
+$dark_background: $ifBlack;
+$copy_color: $ifBlack;
+$headline_color: $brand;
+$button_color: $brand;
+$hover: $darkGray;
+$social_hover: $ifTeal;
+$background_color: $ifGray;
+$border_color: #49A6E2;
+$overlay: rgba(33,161,193,.70);
+
+// ----- FONTS -----
+$lato: 'Lato', sans-serif;
+$bold_font: 700;
+$secondary_font: $lato;
+$merriweather: 'Merriweather', serif;
+$primary_font: $merriweather;
+
+
+
+// ----- GRID -----
+$max-width: 2600px; //true 1650px content column when accounting for container and column padding
+$grid-columns: 12;
+$column-width: ((1/$grid-columns)*100%);
+$gutter-width: 20px;
+$gutter-width-sm: 20px;
+$gutter-width-med: 24px;
+$gutter-width-lg: 30px;
+$gutter-width-xl: 40px;
+
+    //breakpoints
+    $breakpoint1prefix: sm;
+    $breakpoint2prefix: med;
+    $breakpoint3prefix: lg;
+    $breakpoint4prefix: xl;
+
+    //values
+    $sm: 380px;
+    $med: 768px;
+    $lg: 1024px;
+    $xl: 1650px;
+
+    //breakpoint names and values as a sass 'array'
+    $breakpoints: $breakpoint1prefix $sm, $breakpoint2prefix $med, $breakpoint3prefix $lg, $breakpoint4prefix $xl;
+
+// ---- General Layout ----
+
+$page_padding_bottom: 75px;
+$layout_split_width: 375px;
+$scrollspeed: 0.7s;
+$line_thickness: 2px;
+
+
+//transitions
+$color-1: #4089a6; // Steel Blue
+$color-2: #283040; // Ebony Clay
+$color-3: #ffffff; // White
+

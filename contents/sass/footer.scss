@@ -1,0 +1,105 @@
+//footer & social icons
+a.symbol {
+    position: relative;
+
+    &.icon {
+        @include font-size(44px);
+        margin: 0 8px;
+        &:before {
+            content: "";
+            margin: 0;
+        }
+
+        &.facebook {
+            margin-left: 0;
+        }
+    }
+}
+
+a.symbol:hover:after {
+    background-color: $dark_background;
+}
+
+footer {
+    color: #fff;
+    padding-bottom: 82px;
+    background-color: $dark_background;
+    display: none;
+
+    @include breakpoint(med) {
+        display: block;
+        margin-top: 35px;
+    }
+
+    h1 {
+        @include font-size(12px);
+        font-family: $bold_font;
+        margin-top: 18px;
+    }
+
+    .column {
+        font-family: $secondary_font;
+    }
+    a.symbol {z-index: 2;}
+    a.symbol:after {
+        z-index: -1;
+        background-color: transparent;
+        top: 16px;
+        width: 27px;
+        height: 28px;
+        left: 9px;
+    }
+
+    a.symbol:hover:after {
+        background-color: transparent;
+    }
+}
+
+.social_icons_container {
+    text-align: center;
+    color: #fff;
+    padding-top: 43px;
+
+    .symbol {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        @include font-size(34px);
+
+        &:hover {
+            color: $social_hover;
+            @include transition (color .35s ease);
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+
+    p {
+        color: #fff;
+        @include font-size(10px);
+    }
+}
+
+.footer_links {
+    text-align: center;
+    a {
+        color: #fff;
+        text-decoration: none;
+        @include font-size(12px);
+        font-family: $bold_font;
+        text-transform: none;
+        letter-spacing: 2px;
+
+        &:after {
+            content: "|";
+            color: #fff !important;
+            margin: 0 10px;
+        }
+
+        &:last-child:after {
+            content: none;
+        }
+    }
+}

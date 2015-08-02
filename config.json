@@ -1,0 +1,25 @@
+{
+  "output": "../",
+  "locals": {
+    "url": "/",
+    "name": "Chris and Emma's Housewarming Party! August 22, 2015",
+    "owner": "Chris and Emma",
+    "description": "Chris and Emma are hosting a housewarming party and you're invited!"
+  },
+  "plugins": [
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true,
+    "basedir": "contents"
+  },
+  "markdown": {
+    "smartLists": true,
+    "widont": false,
+    "smartypants": true
+  }
+}

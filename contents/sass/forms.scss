@@ -1,0 +1,156 @@
+//forms
+
+form {
+  width: 100%;
+  margin-top: 30px;
+
+  @include breakpoint(med) {
+
+    .first_name, .last_name {
+      width: 48%;
+    }
+
+    .first_name {
+      float: left;
+      margin-right: 2%;
+    }
+
+    .last_name {
+      float: right;
+      margin-left: 2%;
+    }
+  }
+}
+
+input:not([type='submit']), textarea, select {
+  border: 1px solid #DADADA;
+  color: #888;
+  margin-bottom: 25px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 10px 5px;
+  font-size: 12px;
+  line-height: 22px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+  @include font-size(16px);
+  letter-spacing: 1px;
+  font-family: $secondary_font;
+}
+
+input, textarea, select {
+  display: block;
+  width: 100%;
+}
+
+select {
+  background: #FFF url("down-arrow.png") no-repeat right;
+  background: #FFF url("down-arrow.png") no-repeat right;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  height: 35px;
+  line-height: 25px;
+}
+
+label {
+  display: block;
+  margin: 0px;
+}
+
+label > span {
+  float: left;
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+  color: #888;
+}
+
+textarea {
+  padding: 10px;
+  height: 200px;
+  line-height: 24px;
+}
+
+textarea.active {
+  margin-bottom: 0;
+}
+
+input[type="submit"] {
+    @include font-size(16px);
+    background-color: $button_color;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    padding: 14px 36px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+    cursor: pointer;
+    font-family: $secondary_font;
+    font-weight: $bold_font;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include transition(background-color 0.15s ease);
+    border: none;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      background-color: $hover;
+    }
+
+    @include breakpoint (med) {
+      display: inline-block;
+      width: auto;
+    }
+}
+
+// .submit_container {
+//   position: relative;
+//   float: left;
+//   overflow: hidden;
+
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     width: 117%;
+//     height: 321%;
+//     background: $hover;
+//     -webkit-transition: all 0.35s ease-in-out;
+//     transition: all 0.35s ease-in-out;
+//     top: -117px;
+//     left: 114%;
+//     transform: rotate(152deg);
+//     z-index: 1;
+//   }
+
+//   &:hover:after {
+//     top: -55px;
+//     left: -17px;
+//   }
+// }
+
+.required-message, .error-message { color: #c43b1d; display: none; font-size: 13px; } .required~.required-message, .error~.error-message { display: block; }
+
+.success_message {
+  visibility: hidden;
+  opacity: 0;
+  @include transform(translateY(50px));
+  @include transition(all .5s ease-in-out);
+  height: 0;
+}
+
+.submitted {
+  .success_message {
+    opacity: 1;
+    visibility: visible;
+    @include transform(translateY(20px));
+    height: auto;
+  }
+}
