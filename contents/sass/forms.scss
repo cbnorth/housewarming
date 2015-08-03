@@ -147,6 +147,9 @@ input[type="submit"] {
 }
 
 .submitted {
+  .ss-form-question, #ss-submit {
+    display: none;
+  }
   .success_message {
     opacity: 1;
     visibility: visible;
