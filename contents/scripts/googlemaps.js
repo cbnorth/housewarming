@@ -2,7 +2,7 @@ module.exports = function initGoogleMap() {
     //Map settings
 
     //Coordinates
-    var myLatlng = new google.maps.LatLng(47.61873,-122.308072);
+    var myLatlng = new google.maps.LatLng(47.622066,-122.297415);
 
     //options
     var mapOptions = {
